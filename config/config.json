@@ -9,6 +9,8 @@
         "database": "vu678uyllq7rcl5x",
  
         "host": "s0znzigqvfehvff5.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+
+        "port": "3306",
  
         "dialect": "mysql"
  
@@ -23,6 +25,8 @@
         "database": "vu678uyllq7rcl5x",
  
         "host": "s0znzigqvfehvff5.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+
+        "port": "3306",
  
         "dialect": "mysql"
  
@@ -37,6 +41,8 @@
         "database": "vu678uyllq7rcl5x",
  
         "host": "s0znzigqvfehvff5.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+
+        "port": "3306",
  
         "dialect": "mysql"
  
