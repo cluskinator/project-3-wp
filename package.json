@@ -6,8 +6,6 @@
   "scripts": {
     "build": "npm-run-all build:*",
     "build:quickstart": "browserify quickstart/src/index.js > quickstart/public/index.js",
-    "clean": "npm-run-all clean:*",
-    "clean:quickstart": "rimraf quickstart/public/index.js",
     "start": "npm run clean && npm run build && node server"
   },
   "repository": {
