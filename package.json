@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npm-run-all build:*",
     "build:quickstart": "browserify quickstart/src/index.js > quickstart/public/index.js",
-    "start": "npm run clean && npm run build && node server"
+    "start": "npm run build && node server"
   },
   "repository": {
     "type": "git",
