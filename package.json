@@ -1,7 +1,7 @@
 {
-  "name": "video-quickstart-js",
+  "name": "worldphone",
   "version": "1.0.0-dev",
-  "description": "Twilio Video SDK Quick Start for JavaScript",
+  "description": "worldphone - calling application (for project 3 bootcamp)",
   "main": "index.js",
   "scripts": {
     "build": "npm-run-all build:*",
