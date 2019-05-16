@@ -31,3 +31,9 @@ exports.dashboard = function(req, res) {
     res.render('dashboard');
  
 }
+
+exports.form = function(req, res) {
+    
+    res.render('form');
+
+}

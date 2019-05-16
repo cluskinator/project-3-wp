@@ -5,20 +5,35 @@
     <title>worldphone - sign in</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
+<style type="text/css">
+    body{text-align:center}
+
+</style>
+
  
+<header>
+        <img src="views/wp_logo.png">
+</header>
 <body>
 
-<p>
-    welcome back to worldphone. please sign in below.
-</p>
-<form id="signin" name="signin" method="post" action="signin">
-    <label for="email">Email Address</label>
+
+
+<h1 style="color:lightblue">
+    welcome back. please sign in below.
+</h1>
+<form id="signin" name="signin" method="post" action="signin" style="margin-left: 50px">
+    <label for="email" style="margin-top:50px">Email Address</label>
     <input class="text" name="email" type="text" />
-    <label for="password">Password</label>
+    <br>
+    <label for="password" style="margin-top:10px">Password</label>
     <input name="password" type="password" />
+    <br>
     <input class="button" type="submit" value="Sign In" />
 </form>
  
 </body>
- 
+
+<footer style="position:fixed;  left:0px;  bottom:0px;   height:30px; width:100%; background:#999; position:absolute" >
+  worldphone (c) 2019
+</footer>
 </html>

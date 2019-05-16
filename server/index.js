@@ -20,6 +20,7 @@ var session    = require('express-session')
 var bodyParser = require('body-parser')
 var env        = require('dotenv').config()
 var exphbs     = require('express-handlebars')
+var userName   = require('../models/user')
 
 // Create Express webapp.
 var app = express();
@@ -49,7 +50,7 @@ var signupPath = path.join(__dirname, '../views');
 app.use('/views', express.static(signupPath));
 
 /**
- * Default to the signup page.
+ * default to the signup page
  */
 app.get('/', function(request, response) {
   response.redirect('/signup');
@@ -120,19 +121,15 @@ app.get('/', function(req, res){
 });
 
 
-//Models
+// models
 var models = require("../models");
 
-
-//Routes
+// routes
 var authRoute = require('../routes/auth.js')(app,passport);
-
 
 //load passport strategies
 require('../config/passport/passport.js')(passport,models.user);
 
-
-//Sync Database
    models.sequelize.sync().then(function(){
 console.log('Sequelize worked')
 
@@ -149,29 +146,28 @@ console.log(err,"DB Issue")
 app.get('/token', function(request, response) {
   var identity = randomName();
 
-  // Create an access token which we will sign and return to the client,
-  // containing the grant we just created.
+  //creates a token for each user.
   var token = new AccessToken(
     process.env.TWILIO_ACCOUNT_SID,
     process.env.TWILIO_API_KEY,
     process.env.TWILIO_API_SECRET
   );
 
-  // Assign the generated identity to the token.
+  // required per documentation.  assigns identity to participant.
   token.identity = identity;
 
-  // Grant the access token Twilio Video capabilities.
+  // use the token to grant video.
   var grant = new VideoGrant();
   token.addGrant(grant);
 
-  // Serialize the token to a JWT string and include it in a JSON response.
+  // send token as a JSON to the rest of the app.
   response.send({
     identity: identity,
     token: token.toJwt()
   });
 });
 
-// Create http server and run it.
+// creates server.
 var server = http.createServer(app);
 var port = process.env.PORT || 3000;
 server.listen(port, function() {

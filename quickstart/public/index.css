@@ -142,3 +142,202 @@ div#controls div#log p {
   text-indent: -1.25em;
   width: 90%;
 }
+
+
+header.navigation {
+  background-color: #7643BB;
+  width: 100%;
+  z-index: 1000; }
+  header.navigation a {
+    font-family: "Avenir", sans-serif; }
+  header.navigation .navigation-wrapper {
+    height: 80px;
+    position: relative; }
+    header.navigation .navigation-wrapper::after {
+      clear: both;
+      content: "";
+      display: table; }
+  header.navigation .logo {
+    background-image: url("../assets/img/wp_logo.png");
+    background-image: url("../assets/img/wp_logo.png");
+    overflow: hidden;
+    text-indent: 101%;
+    white-space: nowrap;
+    background-size: 100%;
+    color: #91E2ED;
+    cursor: pointer;
+    float: left;
+    margin: 15px 30px 15px 15px;
+    height: 50px;
+    width: 226.06383px; }
+    @media screen and (max-width: 690px) {
+      header.navigation .logo {
+        margin-top: 19.5px;
+        height: 37.5px;
+        width: 169.54787px; } }
+  header.navigation nav {
+    float: none;
+    min-height: 80px;
+    z-index: 10000; }
+  header.navigation ul.navigation-menu {
+    width: 100%;
+    clear: both;
+    display: none;
+    margin: 0 auto;
+    overflow: visible;
+    padding: 0;
+    width: 100%;
+    z-index: 10001; }
+    header.navigation ul.navigation-menu li:last-child {
+      margin-right: 0; }
+  header.navigation i.fa {
+    margin: 1em 0.25em 0 0; }
+  header.navigation .nav-link {
+    display: block;
+    font-size: 1.25em;
+    line-height: 80px;
+    margin: 0 -5px;
+    text-align: center;
+    width: 100%; }
+    header.navigation .nav-link a {
+      color: #F4F4F4;
+      display: inline-block;
+      text-decoration: none; }
+    header.navigation .nav-link:focus, header.navigation .nav-link:hover {
+      background-color: #5e3695;
+      color: #FFF; }
+    header.navigation .nav-link.active {
+      background-color: #5e3695; }
+      header.navigation .nav-link.active a {
+        padding-bottom: 3px; }
+    header.navigation .nav-link.sign-out {
+      background-color: #5e3695;
+      cursor: pointer;
+      margin: 0;
+      position: fixed;
+      top: 0;
+      right: 0; }
+    header.navigation .nav-link.navigation-menu-toggle {
+      background-color: #5e3695;
+      color: #F4F4F4;
+      cursor: pointer;
+      margin: 0;
+      padding-left: 40px;
+      padding-right: 40px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      text-align: center;
+      width: auto;
+      z-index: 10001; }
+      header.navigation .nav-link.navigation-menu-toggle:focus, header.navigation .nav-link.navigation-menu-toggle:hover {
+        color: #FFF; }
+      header.navigation .nav-link.navigation-menu-toggle i.fa {
+        margin-right: 0; }
+  header.navigation .sign-in {
+    background-color: #5e3695;
+    color: #FFF;
+    margin-top: -webkit-calc(80px / 2 - 1em - 0.5em);
+    margin-top: calc(80px / 2 - 1em - 0.5em);
+    float: right; }
+    header.navigation .sign-in:hover, header.navigation .sign-in:focus {
+      background-color: #4b2b77;
+      color: #FFF; }
+    header.navigation .sign-in:disabled:hover {
+      background-color: #5e3695; }
+    header.navigation .sign-in i.fa {
+      color: #FFF; }
+    @media screen and (max-width: 690px) {
+      header.navigation .sign-in {
+        margin: 0.25em;
+        padding: 1em;
+        width: auto; } }
+  @media screen and (min-width: 930px) {
+    header.navigation .navigation-wrapper {
+      margin-left: 226.06383px;
+      width: calc(100% - $logo-width); }
+    header.navigation nav {
+      float: left; }
+    header.navigation ul.navigation-menu {
+      display: inline-block;
+      height: 80px;
+      margin: 0;
+      padding: 0; }
+    header.navigation .nav-link {
+      background: transparent;
+      display: inline-block;
+      height: 80px;
+      line-height: 80px;
+      padding-left: 2em;
+      padding-right: 2em;
+      width: auto; }
+      header.navigation .nav-link.sign-out {
+        position: absolute; }
+    header.navigation .navigation-menu-toggle {
+      display: none; } }
+  @media screen and (max-width: 930px) {
+    header.navigation .navigation-wrapper {
+      margin-left: 226.06383px;
+      width: calc(100% - $logo-width); }
+    header.navigation nav {
+      width: 100%;
+      margin-top: 80px;
+      margin-left: -226.06383px;
+      width: 100vw; }
+      header.navigation nav ul.navigation-menu {
+        width: 100%;
+        background-color: #5e3695;
+        display: block; }
+      header.navigation nav:not(.expanded) {
+        display: none; }
+    header.navigation .nav-link {
+      width: 100%;
+      display: block; }
+      header.navigation .nav-link a {
+        width: 100%; }
+      header.navigation .nav-link.active {
+        background: none; }
+      header.navigation .nav-link.sign-out {
+        position: relative; }
+    header.navigation nav {
+      height: -webkit-calc(100vh - 160px);
+      height: calc(100vh - 160px); }
+    header.navigation .nav-link:not(.navigation-menu-toggle) {
+      height: -webkit-calc((100vh - 160px) / 4);
+      height: calc((100vh - 160px) / 4); }
+      header.navigation .nav-link:not(.navigation-menu-toggle) a {
+        height: -webkit-calc((100vh - 160px) / 4);
+        height: calc((100vh - 160px) / 4);
+        padding-top: -webkit-calc(((100vh - 160px) / 4 - 80px) / 2);
+        padding-top: calc(((100vh - 160px) / 4 - 80px) / 2);
+        font-size: 1.75em; }
+        header.navigation .nav-link:not(.navigation-menu-toggle) a i {
+          margin-top: 0.25em; } }
+
+footer {
+  display: inline-block;
+  margin-bottom: 0;
+  text-align: center;
+  width: 100%; }
+  footer span {
+    margin-top: -webkit-calc(80px / 2 - 0.75em);
+    margin-top: calc(80px / 2 - 0.75em);
+    display: inline-block; }
+    footer span.links {
+      display: block;
+      font-size: 0.9em;
+      margin-top: -0.5em; }
+      footer span.links a {
+        color: rgba(244, 244, 244, 0.75);
+        cursor: pointer; }
+  footer.footer {
+    background-color: #333;
+    min-height: 80px;
+    font-size: 1.25em;
+    font-family: "Avenir", sans-serif;
+    position: fixed;
+    bottom: 0; }
+    footer.footer span:first-of-type {
+      margin-top: -webkit-calc(80px / 2 - 1.1em);
+      margin-top: calc(80px / 2 - 1.1em); }
+

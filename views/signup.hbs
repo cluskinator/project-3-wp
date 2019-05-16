@@ -7,23 +7,38 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
- 
+ <style type="text/css">
+    body{text-align:center}
+
+</style>
+
 <body>
     <header>
-        
+        <img src="views/wp_logo.png">
     </header>
-    <p>welcome to worldphone.  please sign up using the form below.</p>
-    <div id="signupForm">
+
+    <h1 style="color:lightblue">welcome. please sign up using the form below.</h1>
+    <div id="signupForm" style="margin-top:50px; margin-left: 50px">
         <form id="signup" name="signup" method="post" action="/signup">
         <label for="email">Email Address</label>
         <input class="text" name="email" type="email" />
-        <label for="firstname">Firstname</label>
+        <br>
+        <label for="firstname">First Name</label>
         <input name="firstname" type="text" />
-        <label for="lastname">Lastname</label>
+        <br>
+        <label for="lastname">Last Name</label>
         <input name="lastname" type="text" />
+        <br>
         <label for="password">Password</label>
         <input name="password" type="password" />
-        <input class="button" type="submit" value="Sign Up" />
+        <br>
+        <input class="button" style="margin-top:20px" type="submit" value="Sign Up" />
     </form>
     </div>
+</body>
+
+<footer style="position:fixed;  left:0px;  bottom:0px;   height:30px; width:100%; background:#999; position:absolute" >
+  worldphone (c) 2019
+</footer>
+ 
 </html>
