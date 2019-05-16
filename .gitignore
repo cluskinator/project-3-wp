@@ -40,7 +40,7 @@ jspm_packages
 .idea
 
 # Twilio credentials file
-.env
+#.env
 
 # Misc
 .DS_Store
